@@ -21,11 +21,11 @@ Arguments:
 
 This command will download all wallpapers for `march` of `2020` with resolution `800x600`:
 ```
-run.py --year 2020 --month 3 --resolution 800x600
+python run.py --year 2020 --month 3 --resolution 800x600
 ```
 This command will download all wallpapers for every month of `2020` with resolution `1920x1080`:
 ```
-run.py
+python run.py
 ```
 All wallpapers will be downloaded in current users folder with name `wallpapers_{CURRENT_DATETIME}`
 
