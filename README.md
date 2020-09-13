@@ -34,3 +34,4 @@ All wallpapers will be downloaded in current users folder with name `wallpapers_
 make install-dev
 pytest -vv
 ```
+Test also has integration and unit marks. Read `pytest.ini` for more information 
