@@ -30,7 +30,6 @@ python run.py
 All wallpapers will be downloaded in current users folder with name `wallpapers_{CURRENT_DATETIME}`
 
 ## Tests
-(Not implemented yet)
 ```
 make install-dev
 pytest -vv

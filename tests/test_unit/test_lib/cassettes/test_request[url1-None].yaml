@@ -1,0 +1,27 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Host:
+      - www.test.com
+      User-Agent:
+      - Python/3.7 aiohttp/3.6.2
+    method: GET
+    uri: https://www.testerror.com/
+  response:
+    body:
+      string: ""
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html
+    status:
+      code: 404
+      message: Not found
+    url: https://www.test.com/
+version: 1
