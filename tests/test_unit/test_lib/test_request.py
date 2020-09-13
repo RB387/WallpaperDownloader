@@ -7,17 +7,11 @@ from lib.request import request
 
 @pytest.mark.unit
 @pytest.mark.parametrize(
-    'url, expected',
+    "url, expected",
     (
-            (
-                URL('https://www.test.com/'),
-                'PASS TEST'
-            ),
-            (
-                URL('https://www.testerror.com/'),
-                None
-            )
-    )
+        (URL("https://www.test.com/"), "PASS TEST"),
+        (URL("https://www.testerror.com/"), None),
+    ),
 )
 @pytest.mark.vcr(vcr_record=None)
 @pytest.mark.asyncio

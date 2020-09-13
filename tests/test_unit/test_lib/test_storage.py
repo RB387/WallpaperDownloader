@@ -5,12 +5,8 @@ from lib.storage import ListStorage
 
 @pytest.mark.unit
 @pytest.mark.parametrize(
-    'data',
-    (
-        (
-            [1, 2, 3, 4, 5]
-        ),
-    ),
+    "data",
+    (([1, 2, 3, 4, 5]),),
 )
 @pytest.mark.asyncio
 async def test_list_storage(data):

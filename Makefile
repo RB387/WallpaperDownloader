@@ -1,5 +1,6 @@
 lint:
 	black lib && \
+	black tests && \
 	pylint lib
 
 test:

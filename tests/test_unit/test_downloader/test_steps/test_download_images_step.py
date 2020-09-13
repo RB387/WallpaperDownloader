@@ -7,11 +7,11 @@ from lib.storage import ListStorage
 class TestDownloadImagesStep:
     @pytest.mark.unit
     @pytest.mark.parametrize(
-        'config, page_content, expected',
+        "config, page_content, expected",
         (
             (
-                {'resolution': '1920x1080', 'files_path': None},
-                '''
+                {"resolution": "1920x1080", "files_path": None},
+                """
                     <ul>
                         <li><a href="url1">800x600</a></li>
                         <li><a href="url2">1280x720</a></li>
@@ -28,12 +28,12 @@ class TestDownloadImagesStep:
                         <li><a href="url9">800x600</a></li>
                         <li><a href="url10">1920x1080</a></li>
                     </ul>
-                ''',
-                ['url3', 'url10'],
+                """,
+                ["url3", "url10"],
             ),
             (
-                {'resolution': '800x600', 'files_path': None},
-                '''
+                {"resolution": "800x600", "files_path": None},
+                """
                     <ul>
                         <li><a href="url2">1280x720</a></li>
                         <li><a href="url3">1920x1080</a></li>
@@ -47,7 +47,7 @@ class TestDownloadImagesStep:
                     <ul>
                         <li><a href="url10">1920x1080</a></li>
                     </ul>
-                ''',
+                """,
                 [],
             ),
         ),
