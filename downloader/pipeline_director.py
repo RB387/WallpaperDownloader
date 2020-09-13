@@ -3,7 +3,7 @@ from typing import Tuple
 from lib.pipeline_director import AbstractPipelineDirector, AbstractPipelineStep
 from lib.storage import ListStorage
 from downloader.steps.crawl_step import CrawlStep
-from downloader.steps.get_images_step import GetImagesStep
+from downloader.steps.download_images_step import DownloadImagesStep
 
 
 class WallpaperDownloaderPipelineDirector(AbstractPipelineDirector):
@@ -14,7 +14,7 @@ class WallpaperDownloaderPipelineDirector(AbstractPipelineDirector):
                 storage=storage,
                 config=self.config,
             ),
-            GetImagesStep(
+            DownloadImagesStep(
                 storage=storage,
                 config=self.config,
             ),
