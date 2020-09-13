@@ -17,7 +17,7 @@ pip install -r requirements.txt
 Arguments:
 * `--year`: year of wallpapers that should be downloaded (current year by default)
 * `--month`: month of wallpapers that should be downloaded (all `12` months by default)
-* `--resulution`: resolution of wallpapers that should be downloaded (`1920x1080` by default)
+* `--resolution`: resolution of wallpapers that should be downloaded (`1920x1080` by default)
 
 This command will download all wallpapers for `march` of `2020` with resolution `800x600`:
 ```
