@@ -32,6 +32,6 @@ All wallpapers will be downloaded in current users folder with name `wallpapers_
 ## Tests
 ```
 make install-dev
-pytest -vv
+make test
 ```
 Tests also has integration and unit marks. Read `pytest.ini` for more information 
