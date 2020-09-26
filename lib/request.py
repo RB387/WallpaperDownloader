@@ -1,11 +1,11 @@
 import logging
-from typing import Optional as Opt
+from typing import Optional as Opt, Union
 from yarl import URL
 
 from aiohttp import ClientSession, ClientResponse
 
 
-async def request(session: ClientSession, url: URL) -> Opt[ClientResponse]:
+async def request(session: ClientSession, url: Union[str, URL]) -> Opt[ClientResponse]:
     """
     Function used to filter successful requests and log failed
 

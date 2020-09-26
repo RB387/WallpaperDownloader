@@ -49,7 +49,7 @@ class AbstractPipelineDirector(ABC):
         Public method to run all pipelines from _get_pipeline_steps
         :return: None
         """
-        for pipeline_step in self._get_pipeline_steps():
+        for pipeline_step in self.get_pipeline_steps():
             logging.info(f"Starting {pipeline_step.__class__.__name__}")
 
             tasks = await pipeline_step.get_workers_tasks()
@@ -59,5 +59,5 @@ class AbstractPipelineDirector(ABC):
             logging.info(f"Finished {pipeline_step.__class__.__name__}")
 
     @abstractmethod
-    def _get_pipeline_steps(self) -> Tuple[AbstractPipelineStep]:
+    def get_pipeline_steps(self) -> Tuple[AbstractPipelineStep]:
         raise NotImplementedError

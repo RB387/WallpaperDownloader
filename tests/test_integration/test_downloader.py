@@ -10,8 +10,8 @@ from tests.test_integration.patches import patched_save_image
 
 @pytest.mark.integration
 @pytest.mark.asyncio
-async def test_crawl_step(year_config, storage):
-    step = CrawlStep(config=year_config, storage=storage)
+async def test_crawl_step(config, storage):
+    step = CrawlStep(config=config, storage=storage)
 
     tasks = await step.get_workers_tasks()
     await asyncio.gather(*tasks)
@@ -21,8 +21,8 @@ async def test_crawl_step(year_config, storage):
 
 @pytest.mark.integration
 @pytest.mark.asyncio
-async def test_download_images_step(month_config, storage):
-    step = DownloadImagesStep(config=month_config, storage=storage)
+async def test_download_images_step(config, storage):
+    step = DownloadImagesStep(config=config, storage=storage)
     step._save_image = MethodType(patched_save_image, step)
 
     tasks = await step.get_workers_tasks()

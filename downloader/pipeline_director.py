@@ -7,7 +7,7 @@ from downloader.steps.download_images_step import DownloadImagesStep
 
 
 class WallpaperDownloaderPipelineDirector(AbstractPipelineDirector):
-    def _get_pipeline_steps(self) -> Tuple[AbstractPipelineStep]:
+    def get_pipeline_steps(self) -> Tuple[AbstractPipelineStep]:
         storage = ListStorage()
         return (
             CrawlStep(
